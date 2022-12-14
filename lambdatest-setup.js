@@ -7,7 +7,7 @@ const capabilities = {
   'browserName': 'chrome', // Browsers allowed: `Chrome`, `MicrosoftEdge`, `pw-chromium`, `pw-firefox` and `pw-webkit`
   'browserVersion': 'latest',
   'LT:Options': {
-    'platform': 'windows 10',
+    'platform': process.env.HYPEREXECUTE_PLATFORM,
     'build': 'Playwright HyperExecute Build',
     'name': 'Playwright HyperExecute Test',
     'user': process.env.LT_USERNAME,
