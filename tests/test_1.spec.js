@@ -81,7 +81,7 @@ test.describe('Browse LambdaTest in different search engines 1', () => {
 
     console.log('Page title:: ', title)
     // Create new browserContext
-    const newPage = await page._browserContext._browser.newPage(testInfo.project.use)
+    const newPage = await page.context().browser().newPage(testInfo.project.use)
     await newPage.goto('https://www.duckduckgo.com')
     const searchElement = await newPage.$("[name=\"q\"]");
     await searchElement.click();
@@ -90,7 +90,7 @@ test.describe('Browse LambdaTest in different search engines 1', () => {
     const title2 = await newPage.title()
 
 
-    const newPage1 = await page._browserContext._browser.newPage(testInfo.project.use)
+    const newPage1 = await page.context().browser().newPage(testInfo.project.use)
     await newPage1.goto('https://www.google.com')
     const searchElement1 = await newPage1.$("[name=\"q\"]");
     await searchElement1.click();
